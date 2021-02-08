@@ -9,9 +9,8 @@
         android:id="@+id/quantity_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:textSize="20sp"
-        android:paddingTop="10dp"
+        android:padding="16dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/darker_gray"
         android:text="QUANTITY" />
@@ -19,17 +18,35 @@
         android:id="@+id/number_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/quantity_text_view"
         android:textSize="20sp"
         android:padding="16dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:text="0" />
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/darker_gray"
+        android:text="PRICE" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:text="$0" />
     <Button
         android:id="@+id/order_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
         android:text="Order"
         android:onClick="submitOrder"/>
 
-</LinearLayout>>
+</LinearLayout>
