@@ -9,25 +9,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:padding="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/darker_gray"
         android:text="QUANTITY" />
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        android:onClick="increment"/>
     <TextView
         android:id="@+id/quantity_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:padding="16dp"
+        android:padding="5dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:text="0" />
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:onClick="decrement"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
-        android:padding="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/darker_gray"
         android:text="PRICE" />
@@ -36,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:padding="16dp"
+        android:paddingBottom="16dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:text="$0" />
