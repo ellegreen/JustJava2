@@ -17,31 +17,29 @@ import android.widget.TextView;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
+    int quantity = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     /**
-     * This method is called when the order button is clicked.
-     */
-    public void submitOrder(View view) {
-        int quantity = 2;
-        display(quantity);
-        displayPrice(quantity * 5);
-    }
-    /**
      * This method is called when the plus and minus buttons are clicked.
      */
     public void increment(View view) {
-        int quantity = 2;
         quantity = quantity + 1;
         display(quantity);
     }
     public void decrement(View view) {
-        int quantity = 2;
         quantity = quantity - 1;
         display(quantity);
+    }
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public void submitOrder(View view) {
+        display(quantity);
+        displayPrice(quantity * 5);
     }
     /**
      * This method displays the given quantity value on the screen.
