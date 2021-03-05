@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
        // display(quantity);
        // displayPrice(quantity * 5);
-        String priceMessage = "Free";
+        String priceMessage = "Free, did she say \"FREE\"";
         displayMessage(priceMessage);
     }
     /**
