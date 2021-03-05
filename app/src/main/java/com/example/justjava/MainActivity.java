@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
        int price = quantity * 5;
        String priceMessage = "Thank you for wanting " + quantity + " coffees! \nAmount Due: $" + price;
+       priceMessage = priceMessage + "\n\nYour order will be right up!";
        displayMessage(priceMessage);
     }
     /**
