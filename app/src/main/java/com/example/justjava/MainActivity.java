@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void displayQuantity(int number) {
+    private void displayQuantity(int numberOfCoffee) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" + numberOfCoffee);
     }
     /**
      * This method displays the given price on the screen.
@@ -66,4 +66,14 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
+    /**
+     * Calculates the price of the order.
+     *
+     * @param quantity is the number of cups of coffee ordered
+     * @param pricePerCup tell us the price per cup of coffee
+     */
+    private void calculatePrice(int quantity, int pricePerCup) {
+        int price = quantity * pricePerCup;
+    }
 }
+
