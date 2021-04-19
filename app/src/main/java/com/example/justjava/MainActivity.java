@@ -17,7 +17,9 @@ import android.widget.TextView;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
+
     int quantity = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
     }
     /**
      * Calculate the price of the order.
+     *
+     * @return  total price
      */
-    private void calculatePrice() {
+    private int calculatePrice() {
         int price = quantity * 5;
+        return price;
     }
     /**
      * This method displays the given quantity value on the screen.
