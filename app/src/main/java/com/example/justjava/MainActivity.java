@@ -42,12 +42,10 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-       int price = quantity * 5;
+       int price = calculatePrice();
        String priceMessage = "Thank you for wanting " + quantity + " coffees! \nAmount Due: $" + price;
        priceMessage = priceMessage + "\n\nYour order will be right up!";
        displayMessage(priceMessage);
-
-       calculatePrice();
     }
     /**
      * Calculate the price of the order.
