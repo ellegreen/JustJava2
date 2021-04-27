@@ -50,12 +50,12 @@
         android:fontFamily="sans-serif-medium"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="PRICE"
+        android:text="Order Summary"
         android:textColor="@android:color/darker_gray"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
