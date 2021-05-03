@@ -11,7 +11,10 @@ package com.example.justjava;
 import java.text.NumberFormat;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 /**
  * This app displays an order form to order coffee.
@@ -42,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+       CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
+       boolean hasWhippedCream = whippedCreamCheckbox.isChecked();
+        Log.v("MainActivity", "Has Whipped Cream: " + hasWhippedCream);
+
        int price = calculatePrice();
-       String priceMessage = "Thank you for wanting " + quantity + " coffees! \nAmount Due: $" + price;
+       String priceMessage = "Thank you for ordering " + quantity + " coffees! \nAmount Due: $" + price;
        priceMessage = priceMessage + "\n\nYour order will be right up!";
        displayMessage(priceMessage);
     }
