@@ -12,6 +12,15 @@
         android:fontFamily="sans-serif-medium"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
+        android:text="TOPPINGS"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:text="QUANTITY"
         android:textColor="@android:color/darker_gray"
         android:textSize="20sp" />
