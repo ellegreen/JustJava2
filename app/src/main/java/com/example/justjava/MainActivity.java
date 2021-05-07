@@ -47,11 +47,9 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
        CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
        boolean hasWhippedCream = whippedCreamCheckbox.isChecked();
-        Log.v("MainActivity", "Has Whipped Cream: " + hasWhippedCream);
-
+       Log.v("MainActivity", "Has Whipped Cream: " + hasWhippedCream);
        int price = calculatePrice();
-       String priceMessage = "Thank you for ordering " + quantity + " coffees! \nAmount Due: $" + price;
-       priceMessage = priceMessage + "\n\nYour order will be right up!";
+       String priceMessage = createOrderSummary(price, hasWhippedCream);
        displayMessage(priceMessage);
     }
     /**
@@ -63,6 +61,20 @@ public class MainActivity extends AppCompatActivity {
         int price = quantity * 5;
         return price;
     }
+
+    /**
+     * Create a summary of the order
+     * @param price
+     * @param addWhippedCream is whether or not the user wants Whipped Cream Toppings
+     * @return
+     */
+    private String createOrderSummary(int price, boolean addWhippedCream) {
+        String priceMessage = "Thank you for ordering " + quantity + " coffees! \nAmount Due: $" + price;
+        priceMessage += "Add Whipped Cream? " + addWhippedCream;
+        priceMessage += "\n\nYour order will be right up!";
+        return priceMessage;
+    }
+
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -76,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
+        String priceMessage = createOrderSummary();
     }
     /**
      * Calculates the price of the order.
