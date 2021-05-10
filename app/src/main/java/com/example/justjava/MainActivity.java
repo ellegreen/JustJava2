@@ -69,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
      * @return
      */
     private String createOrderSummary(int price, boolean addWhippedCream) {
-        String priceMessage = "Thank you for ordering " + quantity + " coffees! \nAmount Due: $" + price;
-        priceMessage += "Add Whipped Cream? " + addWhippedCream;
+        String priceMessage = "Thank you for ordering " + quantity + " coffees!";
+        priceMessage += "\nAdd Whipped Cream? " + addWhippedCream;
+        priceMessage += "\nAmount Due: $" + price;
         priceMessage += "\n\nYour order will be right up!";
         return priceMessage;
     }
@@ -88,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
-        String priceMessage = createOrderSummary();
     }
     /**
      * Calculates the price of the order.
