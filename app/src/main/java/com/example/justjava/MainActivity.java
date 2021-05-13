@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 /**
  * This app displays an order form to order coffee.
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+       // Get text from the EditText XML
+       EditText nameField = (EditText) findViewById(R.id.name_field);
+       String name = nameField.getText().toString();
+       Log.v("MainActivity", "Name: " + name);
+
        // Figure out if user wants whipped cream
        CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
        boolean hasWhippedCream = whippedCreamCheckbox.isChecked();
