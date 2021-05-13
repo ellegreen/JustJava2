@@ -59,12 +59,13 @@ public class MainActivity extends AppCompatActivity {
        // Figure out if user wants chocolate
        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
        boolean hasChocolate = chocolateCheckBox.isChecked();
+        Log.v("MainActivity", "Has Chocolate: " + hasChocolate);
 
        // Calculate Price
        int price = calculatePrice();
 
        // Display the order summary on the screen
-       String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate);
+       String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
        displayMessage(priceMessage);
     }
     /**
@@ -79,15 +80,18 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Create a summary of the order
-     * @param price
+     *
+     * @param name of the customer
+     * @param price of the order
+     * @param addWhippedCream is whether or not the user wants Whipped Cream Toppings
      * @param addWhippedCream is whether or not the user wants Whipped Cream Toppings
      * @return
      */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
-        String priceMessage = "Name: Elle Green";
+    private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
+        String priceMessage = "Name: " + name;
         priceMessage += "\nThank you for ordering " + quantity + " coffees!";
-        priceMessage += "\nAdd Whipped Cream? " + addWhippedCream;
-        priceMessage += "\nAdd Chocolate? " + addChocolate;
+        priceMessage += "\nHas Whipped Cream? " + addWhippedCream;
+        priceMessage += "\nHas Chocolate? " + addChocolate;
         priceMessage += "\nAmount Due: $" + price;
         priceMessage += "\n\nYour order will be right up!";
         return priceMessage;
